@@ -1,0 +1,10 @@
+.col{
+    float: left;
+    width: 33%;
+}
+
+@media screen and (max-width:400px) {
+    .col {
+      width:100%; 
+    }
+  }

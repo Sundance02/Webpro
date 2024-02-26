@@ -1,0 +1,50 @@
+table, td, th{
+    margin-top: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td{
+    height: 30px;
+}
+
+.column {
+    float: left;
+  }
+.rowone{
+    background-color: rgb(85, 84, 202);
+    margin-left: 20px;
+    margin-bottom: -18px;
+    width: 200px;
+    height: 25px;
+  }
+.rowtwo{
+    background-color: rgb(236, 162, 24);
+    margin-left: 20px;
+    margin-bottom: -18px;
+    width: 180px;
+    height: 25px;
+  }
+.rowthree{
+    background-color: rgba(228, 224, 16, 0.945);
+    margin-left: 20px;
+    margin-bottom: -18px;
+    width: 170px;
+    height: 25px;
+  }
+.rowfour{
+    background-color: rgb(238, 14, 14);
+    margin-left: 20px;
+    margin-bottom: -18px;
+    width: 140px;
+    height: 25px;
+  }
+.rowfive{
+    background-color: rgb(12, 174, 228);
+    margin-left: 20px;
+    margin-bottom: -18px;
+    width: 160px;
+    height: 25px;
+  } 
+h4{
+    padding-top: 2px;
+}

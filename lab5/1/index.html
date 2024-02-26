@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1"></p>
+    <script>
+        getRemoteData("index.json");
+        async function getRemoteData(url) {
+            let datObject = await fetch(url);
+            let information = await datObject.json();
+            let text = "";//ต้องสร้างtext ก่อนเข้า loop ไม่งั้นไม่ขึ้น
+            for(i of information){
+                text += "<p><b>"+i.ID+" "+i.Firstname+" "+i.Lastname+"</b>"+" ("+i.Gender+")"+" is a "+i.Position+", "+i.Address+"</p>";
+            }
+        document.getElementById("p1").innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DOM Changing color and font-size example</title>
+        <style>
+             body { font-Size : 18px;
+                font-family: Arial, Helvetica, sans-serif;  
+            }  
+        </style>    
+    </head>
+    
+    <body>
+    
+        <p id="pid">Question ? </p>
+        <button onclick="changeText();">Click me</button>
+        <div id="ans"></div>    
+    
+        <script>
+            function changeText() {
+                    // step 1
+                    let p = document.getElementById("pid");
+                    p.style.color = "blue";
+                    p.style.fontFamily = "Comic Sans MS";
+                    
+                    
+                    // step 2 : สร้างช่องกรอกคำตอบ
+                    // create label
+                    let la = document.createElement("label");
+                    la.innerHTML ="Answer : "
+                    // create input
+                    let inp = document.createElement("input");
+                    let inatt = document.createAttribute("id"); //สร้าง attri id
+                    inatt.value = "answerbox"; // เพิ่ม value ให้ id
+                    // add to parent 
+                    let parent = document.getElementById("ans");
+                    parent.appendChild(la);
+                    parent.appendChild(inp);
+            }
+    </script>
+
+
+    </body>
+</html>

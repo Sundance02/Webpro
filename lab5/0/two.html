@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--ออกสอบเเน่-->
+    <p id="out"></p>
+
+    <script>
+        getRemoteData("superheroes.json");
+        async function getRemoteData(url) {            
+            let datObject = await fetch(url);
+            let superheroes = await datObject.json();
+           
+            let text = "<h1>" + superheroes.squadName + "</h1>";
+            text += " " + superheroes.homeTown + "<br>";
+            for(i of superheroes.members){
+                text += "-" + i.name + "";
+                text += "("+ i.age + ")"+"<br>";
+                
+                text += "----Power----"+"<br>"
+                text += "<ol>"
+                for(j of i.powers){
+                    text += "<li>"+j+"<br>";
+                }
+                text += "<br>"
+                text += "</ol>"
+            }
+            document.getElementById("out").innerHTML = text;
+        }
+
+</script>
+
+</body>
+
+</html>

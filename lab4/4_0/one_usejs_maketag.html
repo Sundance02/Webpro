@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create element by js</title>
+</head>
+<body>
+    <p id="p1">This is paragraph</p>
+    <!--
+    สร้าง Element node ที่เหมือนกับ Element Tag นี้
+    <p>This is a new node</p>
+    -->
+    <script>
+        // //1.สร้างtag p
+        // let p = document.createElement("p");
+        // //2.สร้าง textnode เพื่อจะเพิ่มไปใน p ทีหลัง
+        // let tx = document.createTextNode("This is a new node");
+        // //3.เอาtxไปเป็น childnode ของ p
+        // p.appendChild(tx);
+        // //4.หา parent ให้ p ในที่นี้คือ body
+        // document.body.appendChild(p);
+    </script>
+
+    <!--
+    สร้าง list ที่ เป็นรายชื่อวันในสัปดาห์ 
+    <ol id="ol1">
+    <li></li>
+    </ol>
+    -->
+    <script>
+        let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let orderList = document.createElement("ol");
+        //สร้าง attribute id
+        orderList.setAttribute("id", "ol1");
+        
+        //for of loop ตาม จำนวน element ใน list
+        for(i of days){
+            let li = document.createElement("li");
+            //เพิ่ม text ให้ li ด้วยการลัดขั้นตอนโดยใช้ innerHtml คือการเพิ่มtextเข้าไปใน <li>ตรงนี้</li>
+            li.innerHTML = i;
+            orderList.appendChild(li);
+        }
+
+        //เพิ่ม orderlist เข้า body
+        document.body.appendChild(orderList);
+    </script>
+</body>
+</html>

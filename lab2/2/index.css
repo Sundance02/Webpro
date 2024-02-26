@@ -1,0 +1,33 @@
+.row{
+    padding-top: 50px;
+}
+.column{
+    float: left;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #3b362d;
+    border-radius: 10px; /*ทำขอบมน*/
+    text-align: center;
+    width: 400px;
+    height: 400px;
+}
+.text{
+    text-align: left;
+    color: white;
+}
+.left{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.right{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.center{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+img{
+    width: 400px;
+    height: 300px;
+}

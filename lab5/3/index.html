@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>QUIZ 1</H1>
+    <p id="out"></p>
+    
+
+    <script>
+        getRemoteData("3.json");
+        async function getRemoteData(url) {            
+            let datObject = await fetch(url);
+            let quiz = await datObject.json();
+           
+            let text = "";
+            let count = 1;
+            for(i of quiz){
+                if(i.answers.correct == 'a'){
+                    text += "<p>"+count+")"+i.question+"<br>"+
+                    "<input checked type='radio' name="+count+">"+"<label>"+i.answers.a+"</label>"+"<br>"+
+                    "<input type='radio' name="+count+">"+"<label>"+i.answers.b+"</label>"+"<br>"+
+                    "<input type='radio' name="+count+">"+"<label>"+i.answers.c+"</label>"                
+                    +"</p>"
+                }
+                if(i.answers.correct == 'b'){
+                    text += "<p>"+count+")"+i.question+"<br>"+
+                        "<input type='radio' name="+count+">"+"<label>"+i.answers.a+"</label>"+"<br>"+
+                        "<input checked type='radio' name="+count+">"+"<label>"+i.answers.b+"</label>"+"<br>"+
+                        "<input type='radio' name="+count+">"+"<label>"+i.answers.c+"</label>"              
+                    +"</p>"
+                }
+                if(i.answers.correct == 'c'){
+                    text += "<p>"+count+")"+i.question+"<br>"+
+                    "<input type='radio' name="+count+">"+"<label>"+i.answers.a+"</label>"+"<br>"+
+                    "<input type='radio' name="+count+">"+"<label>"+i.answers.b+"</label>"+"<br>"+
+                    "<input checked type='radio' name="+count+">"+"<label>"+i.answers.c+"</label>"             
+                    +"</p>"
+                }
+
+                count ++;
+            }
+            
+            document.getElementById("out").innerHTML = text;
+        }
+
+</script>
+</body>
+</html>

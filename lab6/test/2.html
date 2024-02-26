@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .left {
+            background-color: #2196F3;
+            padding: 20px;
+            float: left;
+            width: 20%;
+        }
+
+        .main {
+            background-color: #f1f1f1;
+            padding: 20px;
+            float: left;
+            width: 60%;
+        }
+
+        .right {
+            background-color: #4CAF50;
+            padding: 20px;
+            float: left;
+            width: 20%;
+        }
+
+        /*กำหนด break point ถ้าค่า max-width < 600 เมื่อไหร่*/
+        @media screen and (max-width:600px) {
+
+            .left,
+            .main,
+            .right {
+                width: 100%;
+            }
+            h1 {
+            font-size: 5vw;
+        }
+
+        p {
+            font-size: 5vh;
+        }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Media Queries คือการให้ browser เลือกใช้ style(css) ตามสถานการณ์(breakpoint->เป็นเงื่อนไขถ้าตรงเงื่อนไขจะใช้ css อันนั้น) โดยเราต้องทำหลายๆ style(อย่างน้อย2 css) มา -->
+
+    <h2>Media Queries</h2>
+    <p>Resize the browser window.</p>
+    <p>Make sure you reach the breakpoint at 600px when resizing this frame.</p>
+    <div class="left">
+        <p>Left Menu</p>
+    </div>
+    <div class="main">
+        <p>Main Content</p>
+    </div>
+    <div class="right">
+        <p>Right Content</p>
+    </div>
+
+    <!-- FONT SIZE DEMO -->
+    <h1>Responsive Text demo</h1>
+    <p>Resize the browser window to see how the text size scales.</p>
+</body>
+
+</html>

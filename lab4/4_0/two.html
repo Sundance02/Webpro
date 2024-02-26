@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="div1">
+        <p id="p1">JavaScript</p> 
+        <p id="p2">Python</p>
+        <p id="p3">TypeScript</p>
+        <!-- add a new element here --> 
+    </div>
+    <hr>
+    <div id="div2">
+        <p>My favourite fruit.</p>
+        <!--เพิ่ม tag IMG ตรงนี้-->
+    </div>
+    
+
+    <button type="button" onclick="addNode()">Add Node</button>
+    <button type="button" onclick="deleteNode()">Delete Node</button>
+    <button type="button" onclick="addNewImage()">Add Image</button>
+    <script> 
+        function addNode() {
+            // <p>a new paragraph</p>
+            let ptag = document.createElement("p");
+            // create text node 
+            let txt = document.createTextNode("a new paragraph jajaja");
+            // append text node to a parent node
+            ptag.appendChild(txt);
+
+
+            // select a parent node
+            let parent1 = document.getElementById("div1");
+            // append element node to a parent node คือ div1
+            parent1.appendChild(ptag);
+            /*  uncomment in step 2 **/
+            //อันนี้เพิ่มข้างบน
+            // let childP1 = document.getElementById("p1");
+            // parent1.insertBefore(ptag, childP1);
+                       
+        }
+        function addNewImage() {
+            // <img src="http://10.0.15.21/lab/lab4/apples.jpg">
+
+            let imgtag = document.createElement("img");
+
+            let srcAttr = document.createAttribute("src");
+            srcAttr.value ="http://10.0.15.21/lab/lab4/apples.jpg";
+            
+            //setAttribute"Node" นะ          
+            imgtag.setAttributeNode(srcAttr);
+            // วิธี 2 น่าจะง่ายกว่า !!!!!!!!!!!!!ออกสอบเเน่ๆ!!!!!!!!!!!!!!
+            // imgtag.setAttribute('src', 'http://10.0.15.21/lab/lab4/apples.jpg');
+
+            // add to <div2>
+            let div2 = document.getElementById("div2")   
+            div2.appendChild(imgtag);                                   
+        }
+    
+        function deleteNode() {
+            let parent2 = document.getElementById("div1");
+            let delPtag = document.getElementById("p1");
+            //ใช้ parent ลบ child
+            parent2.removeChild(delPtag);
+        }
+</script>
+</body>
+</html>

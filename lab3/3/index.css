@@ -1,0 +1,25 @@
+h3{
+    padding-top: 8px;
+    padding-left: 8px;
+}
+.row{
+    margin-top: 10px;
+    margin-right: 90%;
+    height: 35px;
+    margin-bottom: 20px;
+}
+.one{
+    background-color: aqua;
+}
+.two{
+    background-color: cornflowerblue;
+}
+.three{
+    background-color: darkcyan;
+}
+.four{
+    background-color: lightseagreen;
+}
+.five{
+    background-color: rgb(91, 223, 223);
+}
