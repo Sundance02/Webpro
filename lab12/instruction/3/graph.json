@@ -1,0 +1,30 @@
+[
+    {
+        "y": 7,
+        "label": "March"
+    },
+    {
+        "y": 12,
+        "label": "April"
+    },
+    {
+        "y": 28,
+        "label": "May"
+    },
+    {
+        "y": 18,
+        "label": "June"
+    },
+    {
+        "y": 41,
+        "label": "July"
+    },
+    {
+        "y": 35,
+        "label": "August"
+    },
+    {
+        "y": 37,
+        "label": "September"
+    }
+]
